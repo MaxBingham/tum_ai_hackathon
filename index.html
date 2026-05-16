@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#0d0805">
+  <title>The Snooze Court</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── Screen 1: Alarm ── -->
+  <div id="screen-alarm" class="screen">
+    <div class="alarm-top">
+      <span class="court-seal">⚖</span>
+      <div class="app-name">THE SNOOZE COURT</div>
+    </div>
+    <div class="alarm-center">
+      <div class="time-display" id="time-display">00:00</div>
+      <div class="alarm-badge">ALARM</div>
+    </div>
+    <div class="alarm-bottom">
+      <button class="wake-btn" id="wake-btn">
+        <span class="wake-btn-text">WAKE</span>
+        <span class="wake-btn-sub">tap to face your charges</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Screen 2: Charged ── -->
+  <div id="screen-charged" class="screen">
+    <div class="charged-header">
+      <span class="court-seal large">⚖</span>
+      <div class="court-full-name">THE HONORABLE SNOOZE COURT</div>
+      <div class="case-number" id="case-number">CASE NO. 0000-0000-0000</div>
+    </div>
+
+    <div class="charge-block">
+      <div class="charge-corner tl"></div>
+      <div class="charge-corner tr"></div>
+      <div class="charge-corner bl"></div>
+      <div class="charge-corner br"></div>
+      <div class="charge-preamble">THE STATE HEREBY CHARGES YOU WITH</div>
+      <div class="charge-title">ATTEMPTED</div>
+      <div class="charge-title">SNOOZERY</div>
+      <div class="charge-degree">IN THE FIRST DEGREE</div>
+      <div class="charge-rule"></div>
+      <p class="charge-description">
+        You knowingly and wilfully attempted to suppress the
+        lawful alarm signal at <span id="alarm-time-charged">00:00</span>,
+        in flagrant disregard of society's schedule.
+      </p>
+    </div>
+
+    <button class="court-btn" id="enter-court-btn">ENTER THE COURT</button>
+  </div>
+
+  <!-- ── Screen 3: Debate (Courtroom) ── -->
+  <div id="screen-debate" class="screen">
+
+    <!-- Judge's Bench -->
+    <div class="judges-bench">
+      <div class="bench-molding top-molding"></div>
+      <div class="bench-inner">
+        <span class="bench-seal">⚖</span>
+        <div class="bench-text">
+          <div class="round-label" id="round-label">ROUND 1 OF 3</div>
+          <div class="debate-status" id="debate-status">SPEAK YOUR DEFENSE</div>
+        </div>
+      </div>
+      <div class="bench-molding bottom-molding"></div>
+    </div>
+
+    <!-- Courtroom Floor: pillars + transcript -->
+    <div class="courtroom-floor">
+      <div class="pillar">
+        <div class="pillar-cap"></div>
+        <div class="pillar-shaft"></div>
+        <div class="pillar-base"></div>
+      </div>
+
+      <div class="debate-log-wrapper">
+        <div class="debate-log" id="debate-log"></div>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-cap"></div>
+        <div class="pillar-shaft"></div>
+        <div class="pillar-base"></div>
+      </div>
+    </div>
+
+    <!-- Witness Stand -->
+    <div class="witness-stand">
+      <div class="stand-rail"></div>
+      <div class="stand-face">
+        <button class="mic-btn" id="mic-btn">
+          <span class="mic-icon">🎤</span>
+        </button>
+        <div class="mic-instruction" id="mic-instruction">TAP TO SPEAK</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── Screen 4: Verdict ── -->
+  <div id="screen-verdict" class="screen">
+    <div class="verdict-header">
+      <div class="verdict-title">THE COURT'S VERDICT</div>
+    </div>
+    <div class="verdict-gavel-area">
+      <div class="gavel-container">
+        <span class="gavel" id="verdict-gavel">🔨</span>
+      </div>
+      <div class="score-display" id="score-display"></div>
+    </div>
+    <div class="verdict-speech-area">
+      <div class="verdict-speech">
+        <span id="verdict-speech-text"></span><span class="cursor">|</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Screen 5: Result ── -->
+  <div id="screen-result" class="screen">
+    <div class="result-header">
+      <span class="court-seal">⚖</span>
+    </div>
+    <div class="result-center">
+      <div class="result-verdict" id="result-verdict"></div>
+      <p class="result-message" id="result-message"></p>
+    </div>
+    <div class="result-footer">
+      <div class="stats-display">
+        <span class="win-stat">W&nbsp;<span id="stat-wins">0</span></span>
+        <span class="loss-stat">L&nbsp;<span id="stat-losses">0</span></span>
+      </div>
+      <button class="court-btn" id="new-case-btn">NEW CASE</button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
